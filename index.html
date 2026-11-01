@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoPot — Sustainable Plant Pots for a Greener Tomorrow</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🌿</span> EcoPot
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#process">How It's Made</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Open Shopping Cart">
+          <span class="cart-btn-icon">🛒</span>
+          <span class="cart-btn-label">Cart</span>
+          <span class="cart-count-badge" id="navCartCount">0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-tag">🌱 100% Biodegradable &amp; Sustainable</p>
+      <h1>Beautiful Pots.<br />Zero Guilt.</h1>
+      <p class="hero-desc">Hand-crafted eco-friendly pots made from natural, renewable materials. Nurture your plants and the planet at the same time.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">Shop Collection</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="50000">0</span>+
+          <span class="stat-label">Pots Sold</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="12000">0</span>+
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="100">0</span>%
+          <span class="stat-label">Eco-Friendly</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about"><span></span></a>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Story</span>
+        <h2>Rooted in Sustainability</h2>
+        <p>We believe every plant deserves a home that doesn't cost the Earth — literally.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-img-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1463320726281-696a485928c7?auto=format&fit=crop&w=900&q=80" 
+              alt="Hands nurturing plant in sustainable eco pot" 
+              class="about-img" 
+              id="aboutImg"
+              loading="lazy"
+              onerror="handleAboutImgError(this)" 
+            />
+            <div class="about-eco-badge">
+              <span class="badge-icon">🌿</span>
+              <span>100% Plastic-Free Craftsmanship</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>From Nature, For Nature</h3>
+          <p>EcoPot was founded in 2022 with a simple mission: replace plastic plant pots with beautiful, biodegradable alternatives. Every pot we create is made from sustainably sourced materials — coconut coir, rice husk, bamboo fiber, and organic clay.</p>
+          <p>Unlike plastic pots that persist in landfills for centuries, our pots naturally decompose, enriching the soil they return to. And because they're breathable, your plants actually grow healthier in them.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="feature-icon">♻️</span>
+              <div>
+                <strong>100% Biodegradable</strong>
+                <p>Decomposes naturally within 2-5 years</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="feature-icon">🌾</span>
+              <div>
+                <strong>Natural Materials</strong>
+                <p>Made from coconut coir, rice husk &amp; bamboo</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="feature-icon">💧</span>
+              <div>
+                <strong>Plant-Friendly</strong>
+                <p>Breathable walls promote healthy root growth</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Collection</span>
+        <h2>Handcrafted with Love</h2>
+        <p>Each pot is unique, sustainable, and designed to make your green space shine.</p>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="product-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="indoor">Indoor</button>
+        <button class="filter-btn" data-filter="outdoor">Outdoor</button>
+        <button class="filter-btn" data-filter="hanging">Hanging</button>
+        <button class="filter-btn" data-filter="seed-starter">Seed Starters</button>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Product 1 -->
+        <div class="product-card" data-category="indoor" data-id="1">
+          <div class="product-badge">Best Seller</div>
+          <div class="product-image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&q=80" 
+              alt="Coconut Coir Pot" 
+              class="product-real-img"
+              loading="lazy"
+              onerror="handleProductImgError(this, '🪴', '#a8d5a2', '#6b9e6b')" 
+            />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Indoor</span>
+            <h3 class="product-title">Coconut Coir Pot</h3>
+            <p>Perfect for small indoor plants. Made from compressed coconut fiber.</p>
+            <div class="product-footer">
+              <span class="product-price">$12.99</span>
+              <button class="btn btn-sm btn-add-cart" onclick="addToCart(1)">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="outdoor" data-id="2">
+          <div class="product-image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=600&q=80" 
+              alt="Bamboo Fiber Planter" 
+              class="product-real-img"
+              loading="lazy"
+              onerror="handleProductImgError(this, '🏺', '#d4a574', '#b8956a')" 
+            />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Outdoor</span>
+            <h3 class="product-title">Bamboo Fiber Planter</h3>
+            <p>Sturdy and weather-resistant. Ideal for balcony and garden use.</p>
+            <div class="product-footer">
+              <span class="product-price">$18.99</span>
+              <button class="btn btn-sm btn-add-cart" onclick="addToCart(2)">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="indoor" data-id="3">
+          <div class="product-badge eco">Eco Pick</div>
+          <div class="product-image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80" 
+              alt="Rice Husk Mini Pot" 
+              class="product-real-img"
+              loading="lazy"
+              onerror="handleProductImgError(this, '🌱', '#c8b99a', '#a89878')" 
+            />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Indoor</span>
+            <h3 class="product-title">Rice Husk Mini Pot</h3>
+            <p>Compact and charming. Great for succulents, ferns, and cacti.</p>
+            <div class="product-footer">
+              <span class="product-price">$8.49</span>
+              <button class="btn btn-sm btn-add-cart" onclick="addToCart(3)">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-category="hanging" data-id="4">
+          <div class="product-image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=600&q=80" 
+              alt="Jute Hanging Basket" 
+              class="product-real-img"
+              loading="lazy"
+              onerror="handleProductImgError(this, '🌿', '#8bc6a0', '#5a9c6a')" 
+            />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Hanging</span>
+            <h3 class="product-title">Jute Hanging Basket</h3>
+            <p>Hand-woven jute basket with a waterproof coconut liner.</p>
+            <div class="product-footer">
+              <span class="product-price">$22.99</span>
+              <button class="btn btn-sm btn-add-cart" onclick="addToCart(4)">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card" data-category="seed-starter" data-id="5">
+          <div class="product-image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=600&q=80" 
+              alt="Peat-Free Starter Kit" 
+              class="product-real-img"
+              loading="lazy"
+              onerror="handleProductImgError(this, '🌾', '#b5d6a7', '#7ab86e')" 
+            />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Seed Starter</span>
+            <h3 class="product-title">Peat-Free Starter Kit</h3>
+            <p>Set of 24 biodegradable seed pots. Plant directly into soil!</p>
+            <div class="product-footer">
+              <span class="product-price">$14.99</span>
+              <button class="btn btn-sm btn-add-cart" onclick="addToCart(5)">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card" data-category="outdoor" data-id="6">
+          <div class="product-badge">New</div>
+          <div class="product-image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1598880940371-c756e015fea1?auto=format&fit=crop&w=600&q=80" 
+              alt="Organic Clay Planter" 
+              class="product-real-img"
+              loading="lazy"
+              onerror="handleProductImgError(this, '🪨', '#d4c5a0', '#b8a878')" 
+            />
+          </div>
+          <div class="product-info">
+            <span class="product-category">Outdoor</span>
+            <h3 class="product-title">Organic Clay Planter</h3>
+            <p>Hand-thrown organic clay, fired at low temp. Classic and timeless.</p>
+            <div class="product-footer">
+              <span class="product-price">$26.99</span>
+              <button class="btn btn-sm btn-add-cart" onclick="addToCart(6)">
+                <span>🛒</span> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BENEFITS ========== -->
+  <section class="section benefits" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why EcoPot?</span>
+        <h2>Better for Plants. Better for Earth.</h2>
+        <p>Discover why thousands of gardeners are making the switch.</p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🌍</div>
+          <h3>Zero Plastic Waste</h3>
+          <p>Every EcoPot replaces a plastic pot that would sit in a landfill for 500+ years. Our pots return to the earth naturally.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌬️</div>
+          <h3>Breathable Walls</h3>
+          <p>Unlike plastic, our pots allow air to reach the roots, preventing root rot and promoting stronger, healthier plant growth.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💧</div>
+          <h3>Natural Moisture Control</h3>
+          <p>The organic fibers naturally regulate moisture, reducing overwatering and keeping your plants perfectly hydrated.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🐛</div>
+          <h3>Chemical-Free</h3>
+          <p>No harmful dyes, chemicals, or synthetic coatings. Safe for edible plants, kids, and pets.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🌡️</div>
+          <h3>Temperature Regulation</h3>
+          <p>Natural materials insulate roots against extreme heat and cold, extending the growing season.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🤝</div>
+          <h3>Fair Trade Crafted</h3>
+          <p>Every pot is handmade by artisan communities who are paid fair wages and work in safe conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ENVIRONMENTAL IMPACT ========== -->
+  <section class="section impact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Impact</span>
+        <h2>Numbers That Matter</h2>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-number" data-target="25">0</div>
+          <p>Tons of plastic prevented from entering landfills</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number" data-target="150">0</div>
+          <p>Artisan families supported worldwide</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number" data-target="5000">0</div>
+          <p>Trees planted through our reforestation program</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-number" data-target="98">0</div>
+          <p>Percent of our supply chain is carbon-neutral</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT'S MADE ========== -->
+  <section class="section process" id="process">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Process</span>
+        <h2>From Farm to Your Home</h2>
+        <p>Every EcoPot goes through a mindful, low-impact production process.</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Source</h3>
+            <p>We collect agricultural byproducts — coconut husks, rice hulls, and bamboo offcuts — from local farms. Nothing goes to waste.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Process</h3>
+            <p>Raw materials are cleaned, shredded, and mixed with natural binding agents like cassava starch and natural latex.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Mold &amp; Shape</h3>
+            <p>Artisans hand-press the mixture into molds, creating each pot with care and attention to detail.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Dry &amp; Cure</h3>
+            <p>Pots are sun-dried naturally — no energy-intensive kilns. This gives each pot its unique texture and character.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <h3>Ship Sustainably</h3>
+            <p>We use recycled cardboard packaging with zero plastic. Shipping is carbon-offset through our reforestation partners.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Reviews</span>
+        <h2>What Our Customers Say</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I replaced all my plastic pots with EcoPots and my plants have never been happier. The difference in root health is remarkable!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SA</div>
+            <div>
+              <strong>Sarah A.</strong>
+              <span>Urban Gardener</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Beautiful craftsmanship and knowing they're sustainable makes me love them even more. The bamboo planters are stunning on my patio."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MK</div>
+            <div>
+              <strong>Michael K.</strong>
+              <span>Landscape Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The seed starter kit is genius! I just plant the whole pot into the ground — no transplant shock. My seedling survival rate went way up."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PL</div>
+            <div>
+              <strong>Priya L.</strong>
+              <span>Home Gardener</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2>Common Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            How long do EcoPots last?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our pots typically last 2–5 years depending on conditions. Indoor pots last longer, while outdoor pots gradually decompose as intended. If you want to extend their life, keep them sheltered from constant heavy rain.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Are they waterproof?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Our pots are water-resistant, not fully waterproof — and that's by design! The slight porosity allows air to reach the roots, which is actually healthier for plants. We include a natural saucer with each pot to protect surfaces.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I plant the pot directly in the ground?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Our seed starter pots are specifically designed for this. Simply plant the entire pot into the soil — it will decompose and nourish the plant. For larger pots, we recommend removing the plant first for best results.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you ship internationally?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We ship to over 30 countries. All international shipments are carbon-offset and we use recyclable packaging materials. Delivery typically takes 7–14 business days depending on your location.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What if my pot arrives damaged?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We have a no-questions-asked replacement policy. Simply send us a photo of the damaged pot and we'll ship a new one right away — free of charge. The damaged pot can be composted!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== NEWSLETTER ========== -->
+  <section class="section newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-content">
+          <h2>🌿 Join the Green Movement</h2>
+          <p>Get 15% off your first order plus eco-living tips, new product alerts, and exclusive offers.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p class="newsletter-note">No spam, ever. Unsubscribe anytime. 🌎</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2>We'd Love to Hear From You</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Visit Us</strong>
+              <p>42 Green Lane, Eco District<br />Portland, OR 97201</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <strong>Email Us</strong>
+              <p>hello@ecopot.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Call Us</strong>
+              <p>+1 (503) 555-0142</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">⏰</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon–Fri: 9am–6pm PST<br />Sat: 10am–4pm PST</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell us how we can help..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3><span class="logo-icon">🌿</span> EcoPot</h3>
+          <p>Handcrafted, biodegradable plant pots made with love for your plants and the planet.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Pinterest">📌</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#products">All Products</a></li>
+            <li><a href="#">Indoor Pots</a></li>
+            <li><a href="#">Outdoor Planters</a></li>
+            <li><a href="#">Hanging Baskets</a></li>
+            <li><a href="#">Seed Starters</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#process">How It's Made</a></li>
+            <li><a href="#">Sustainability Report</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns &amp; Exchanges</a></li>
+            <li><a href="#">Bulk Orders</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoPot. All rights reserved. Made with 💚 for the planet.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING QUICK CART BUTTON ========== -->
+  <button class="floating-cart-btn" id="floatingCartBtn" aria-label="View Shopping Cart">
+    <span class="floating-cart-icon">🛒</span>
+    <span class="floating-cart-badge" id="floatingCartBadge">0</span>
+  </button>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ========== CART BACKDROP & SLIDE-OUT DRAWER ========== -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-header">
+      <div class="cart-title-wrap">
+        <span class="cart-title-icon">🛒</span>
+        <h3>Your Eco Cart</h3>
+        <span class="cart-header-count" id="cartHeaderCount">(0 items)</span>
+      </div>
+      <button class="cart-close-btn" id="closeCartBtn" aria-label="Close Shopping Cart">&times;</button>
+    </div>
+
+    <div class="cart-eco-banner">
+      <span>🌱</span> Every order funds 1 tree planted &amp; ships in 100% compostable packaging!
+    </div>
+
+    <!-- Scrollable Items Container -->
+    <div class="cart-items" id="cartItemsList">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Summary & Checkout Footer -->
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <span class="summary-val" id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Eco Packaging &amp; Shipping</span>
+        <span class="summary-badge green">FREE</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Carbon Offset</span>
+        <span class="summary-badge green">$0.00 Included</span>
+      </div>
+      <div class="cart-summary-total">
+        <span>Estimated Total</span>
+        <span class="total-val" id="cartTotal">$0.00</span>
+      </div>
+
+      <div class="cart-actions">
+        <button class="btn btn-primary btn-full checkout-btn" id="checkoutBtn">
+          Proceed to Checkout 🌿
+        </button>
+        <button class="btn-clear-cart" id="clearCartBtn">Clear Cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========== CHECKOUT MODAL ========== -->
+  <div class="checkout-modal-backdrop" id="checkoutModal">
+    <div class="checkout-modal-card">
+      <button class="checkout-close-btn" id="closeCheckoutBtn">&times;</button>
+      <div id="checkoutFormContent">
+        <div class="checkout-header">
+          <span class="checkout-icon">🌱</span>
+          <h3>Sustainable Checkout</h3>
+          <p>Zero plastic packaging • Carbon-neutral delivery</p>
+        </div>
+        <div class="checkout-order-preview">
+          <span>Items in Order: <strong id="checkoutItemCount">0</strong></span>
+          <span>Order Total: <strong id="checkoutTotal">$0.00</strong></span>
+        </div>
+        <form class="checkout-form" id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+          <div class="form-group">
+            <label for="cName">Full Name</label>
+            <input type="text" id="cName" placeholder="Emma Green" required />
+          </div>
+          <div class="form-group">
+            <label for="cEmail">Email for Order Updates</label>
+            <input type="email" id="cEmail" placeholder="emma@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cAddress">Shipping Address</label>
+            <input type="text" id="cAddress" placeholder="123 Evergreen Terrace, Suite 4" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cCity">City</label>
+              <input type="text" id="cCity" placeholder="Portland" required />
+            </div>
+            <div class="form-group">
+              <label for="cZip">ZIP / Postal Code</label>
+              <input type="text" id="cZip" placeholder="97201" required />
+            </div>
+          </div>
+          <div class="checkout-payment-box">
+            <div class="payment-title">Payment Method (Demo Mode)</div>
+            <div class="payment-options">
+              <label class="payment-radio">
+                <input type="radio" name="payment" checked />
+                <span>💳 Credit Card</span>
+              </label>
+              <label class="payment-radio">
+                <input type="radio" name="payment" />
+                <span>🌿 Eco-Pay / Google Pay</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full checkout-submit-btn">
+            Place Sustainable Order ✨
+          </button>
+        </form>
+      </div>
+
+      <!-- Success Screen -->
+      <div class="checkout-success" id="checkoutSuccess" style="display: none;">
+        <div class="success-icon">🎉</div>
+        <h3>Thank You For Planting Green!</h3>
+        <p class="order-id">Order <span id="confirmedOrderId">#ECO-89214</span> has been placed.</p>
+        <p class="success-desc">
+          We are preparing your biodegradable pots with zero plastic. 
+          A confirmation and tracking link have been sent to your email.
+        </p>
+        <div class="tree-planted-card">
+          <span class="tree-icon">🌳</span>
+          <div>
+            <strong>1 Tree Planted!</strong>
+            <p>Your order just planted a mangrove seedling in Madagascar.</p>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-full" id="continueShoppingBtn">
+          Continue Browsing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== TOAST NOTIFICATION CONTAINER ========== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
